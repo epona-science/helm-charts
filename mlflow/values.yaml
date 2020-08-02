@@ -59,6 +59,8 @@ securityContext: {}
 service:
   type: NodePort
   port: 5000
+  # service.annotations -- Annotations to add to the service
+  annotations: {}
 
 ingress:
   enabled: false
