@@ -63,5 +63,9 @@ Create the name of the service account to use
 {{- end -}}
 
 {{- define "mlflow.postgresSecretName" -}}
-{{- printf "%s-postgres" (include "mlflow.fullname" .) -}}
+{{- if .Values.backendStore.existingSecret -}}
+  {{- .Values.backendStore.existingSecret -}}
+{{- else -}}
+  {{- printf "%s-postgres" (include "mlflow.fullname" .) -}}
+{{- end -}}
 {{- end -}}

@@ -11,6 +11,9 @@ backendStore:
   #   port:
   #   database:
 
+  # backendStore.existingSecret -- Name of existing secret containing the keys for configuring postgres.
+  existingSecret:
+
 # defaultArtifactRoot -- A local or remote filepath (e.g. s3://my-bucket). It is mandatory when specifying a database backend store
 defaultArtifactRoot:
 
